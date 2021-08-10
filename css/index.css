@@ -1,0 +1,11 @@
+.image {
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  list-style: none;
+}

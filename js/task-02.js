@@ -15,6 +15,6 @@ const makeList = items => {
   });
 };
 
-const listEl = makeIngredientsList(ingredients);
+const listEl = makeList(ingredients);
 
 document.querySelector('#ingredients').append(...listEl);
