@@ -5,17 +5,7 @@ inputRef.addEventListener('blur', onInputRefBlur);
 function onInputRefBlur({
   currentTarget: { dataset, selectionStart, classList },
 }) {
-  if (selectionStart !== Number(dataset.length)) {
-    classList.remove('valid');
-  }
-
-  if (
-    selectionStart === Number(dataset.length) &&
-    classList.contains('invalid')
-  ) {
-    classList.remove('invalid');
-    classList.add('valid');
-  } else {
-    classList.add('invalid');
-  }
+  selectionStart === Number(dataset.length)
+    ? classList.remove('invalid') & classList.add('valid')
+    : classList.add('invalid');
 }
